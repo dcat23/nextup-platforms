@@ -10,5 +10,15 @@
   "typings": "./src/index.d.ts",
   "bin": {
     "create-nextup-platforms": "./bin/index.js"
-  }
+  },
+  "author": "Devin Catuns",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dcat23/nextup-platforms.git",
+    "directory": "packages/create-nextup-platforms"
+  },
+  "bugs": {
+    "url": "https://github.com/dcat23/nextup-platforms/issues"
+  },
+  "homepage": "https://github.com/dcat23/nextup-platforms/tree/main/packages/create-nextup-platforms#readme",
 }
