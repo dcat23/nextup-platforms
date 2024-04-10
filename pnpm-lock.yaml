@@ -52,6 +52,9 @@ devDependencies:
   '@types/node':
     specifier: 18.16.9
     version: 18.16.9
+  '@types/yargs':
+    specifier: ^17.0.32
+    version: 17.0.32
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.3.0
     version: 7.6.0(@typescript-eslint/parser@7.6.0)(eslint@8.57.0)(typescript@5.4.5)
@@ -88,6 +91,9 @@ devDependencies:
   verdaccio:
     specifier: ^5.0.4
     version: 5.30.3(typanion@3.14.0)
+  yargs:
+    specifier: ^17.7.2
+    version: 17.7.2
 
 packages:
 
