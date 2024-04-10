@@ -1,6 +1,6 @@
 {
   "name": "create-nextup-platforms",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "dependencies": {
     "create-nx-workspace": "18.2.4"
   },
