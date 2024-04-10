@@ -1,0 +1,13 @@
+{
+  "name": "create-nextup-platforms",
+  "version": "0.0.1",
+  "dependencies": {
+    "create-nx-workspace": "18.2.4"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "bin": {
+    "create-nextup-platforms": "./bin/index.js"
+  }
+}

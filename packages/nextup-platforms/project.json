@@ -1,0 +1,64 @@
+{
+  "name": "nextup-platforms",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/nextup-platforms/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/nextup-platforms",
+        "main": "packages/nextup-platforms/src/index.ts",
+        "tsConfig": "packages/nextup-platforms/tsconfig.lib.json",
+        "assets": [
+          "packages/nextup-platforms/*.md",
+          {
+            "input": "./packages/nextup-platforms/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/nextup-platforms/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/nextup-platforms",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/nextup-platforms",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/nextup-platforms/jest.config.ts"
+      }
+    }
+  }
+}
