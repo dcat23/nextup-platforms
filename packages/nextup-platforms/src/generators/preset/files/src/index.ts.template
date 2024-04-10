@@ -1,1 +1,9 @@
 const variable = "<%= name %>";
+const scope = "<%= scope %>"
+const website = "<%= website %>"
+const fileName = "<%= fileName %>"
+const className = "<%= className %>"
+const propertyName = "<%= propertyName %>"
+const constantName = "<%= constantName %>"
+const snakeCaseName = "<%= snakeCaseName %>"
+const title = "<%= title %>"
