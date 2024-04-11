@@ -1,17 +1,47 @@
 {
   "$schema": "https://json-schema.org/schema",
   "$id": "Feature",
-  "title": "",
+  "title": "Nextup Feature creation",
   "type": "object",
   "properties": {
     "name": {
       "type": "string",
-      "description": "",
+      "description": "Name for the feature",
       "$default": {
         "$source": "argv",
         "index": 0
       },
       "x-prompt": "What name would you like to use?"
+    },
+    "hooks": {
+      "type": "array",
+      "description": "React Hooks (eg: windowSize)",
+      "alias": "h"
+    },
+    "api": {
+      "type": "array",
+      "description": "Api related files (eg: getUsers, postSearch)",
+      "alias": "a"
+    },
+    "stores": {
+      "type": "array",
+      "description": "Store files for persistence (eg: authModal, playlist)",
+      "alias": "s"
+    },
+    "components": {
+      "type": "array",
+      "description": "Components to create",
+      "alias": "c"
+    },
+    "types": {
+      "type": "array",
+      "description": "Types to create",
+      "alias": "t"
+    },
+    "utils": {
+      "type": "array",
+      "description": "Utility methods to create",
+      "alias": "u"
     }
   },
   "required": ["name"]

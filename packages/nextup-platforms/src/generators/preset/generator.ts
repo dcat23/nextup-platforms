@@ -22,7 +22,7 @@ export async function presetGenerator(
       },
       build: {
         command: 'prisma generate && prisma db push && next build',
-      },
+      }
     },
   });
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);

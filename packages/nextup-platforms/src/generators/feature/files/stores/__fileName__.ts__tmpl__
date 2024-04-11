@@ -1,0 +1,9 @@
+import { create } from "zustand";
+
+interface I<%= className %>Store {
+
+}
+
+export const use<%= className %>Store = create<I<%= className %>Store>((set, get) => ({
+
+}));

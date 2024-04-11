@@ -1,0 +1,4 @@
+export const <%= propertyName %> = () => {
+  throw new Error("<%= propertyName %> not implemented!");
+  return null;
+}

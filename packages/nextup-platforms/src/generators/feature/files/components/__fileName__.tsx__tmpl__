@@ -1,0 +1,15 @@
+import React, { ReactNode } from 'react';
+
+interface Props {
+  data: any;
+  children?: ReactNode;
+}
+
+export const <%= className %> = ({ data, children }: Props) => {
+  return (
+    <>
+      <%= className %>
+      {children}
+    </>
+  );
+};

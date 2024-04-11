@@ -1,0 +1,14 @@
+import { useMutation } from "@tanstack/react-query";
+
+export const use<%= className %> = () => {
+
+  return useMutation({
+    mutationFn: async () => {},
+
+    onSuccess: (data) => {},
+
+    onError: (error) => {
+      console.log("error", error);
+    },
+  });
+};
