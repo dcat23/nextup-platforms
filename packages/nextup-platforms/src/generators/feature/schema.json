@@ -3,6 +3,7 @@
   "$id": "Feature",
   "title": "Nextup Feature creation",
   "type": "object",
+  "description": "Next application feature creation",
   "properties": {
     "name": {
       "type": "string",
