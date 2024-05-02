@@ -52,7 +52,5 @@ Thumbs.db
 .turbo
 .vercel
 .nx
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+*.css
+*.scss
