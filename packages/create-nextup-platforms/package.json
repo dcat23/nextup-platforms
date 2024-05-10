@@ -1,6 +1,6 @@
 {
   "name": "create-nextup-platforms",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {
     "@nx/devkit": "18.2.4",
     "create-nx-workspace": "18.2.4"
@@ -20,5 +20,5 @@
   "bugs": {
     "url": "https://github.com/dcat23/nextup-platforms/issues"
   },
-  "homepage": "https://github.com/dcat23/nextup-platforms/tree/main/packages/create-nextup-platforms#readme",
+  "homepage": "https://github.com/dcat23/nextup-platforms/tree/main/packages/create-nextup-platforms#readme"
 }

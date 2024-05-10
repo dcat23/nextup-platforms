@@ -2,7 +2,20 @@
 
 This library was generated with [Nx](https://nx.dev).
 
-Scaffold a nextJs project
+
+## Features
+
+- [Nx](https://nx.dev)
+- [Docker](https://docs.docker.com/get-docker/)
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TanStack Query](https://tanstack.com/query/latest)
+- [NextAuth.js](https://next-auth.js.org/)
+- [Prisma](https://www.prisma.io/)
+- [Zustand](https://zustand.surge.sh/)
+- [zod](https://github.com/colinhacks/zod)
+- [Framer motion](https://www.framer.com/motion/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Running
 

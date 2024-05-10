@@ -56,3 +56,7 @@ Thumbs.db
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+Dockerfile
+.dockerignore
+.git
