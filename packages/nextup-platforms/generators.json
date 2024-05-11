@@ -10,6 +10,11 @@
       "factory": "./src/generators/feature/generator",
       "schema": "./src/generators/feature/schema.json",
       "description": "feature generator"
+    },
+    "route": {
+      "factory": "./src/generators/route/generator",
+      "schema": "./src/generators/route/schema.json",
+      "description": "route generator"
     }
   }
 }

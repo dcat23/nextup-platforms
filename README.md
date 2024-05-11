@@ -1,21 +1,25 @@
 # Nextup Platforms
 
 ## Features
+
 * [create-nextup-platforms](./packages/create-nextup-platforms/README.md)
 * [nextup plugin](./packages/nextup/README.md)
 
 ## Using this Repo
 
 1. Start local registry in root
+
 ```bash
 nx local-registry
 ```
 
 2. Build and publish to local registry
+
 ```bash
 nx run-many --targets build
 nx run-many --targets nx-release-publish
 ```
+
 3. Create temporary project
 
 ```bash
@@ -27,32 +31,37 @@ npx create-nextup-platforms@latest nextupPlatformApp --scope dcat23
 ## Generating Plugins
 
 ```bash
-npx nx g @nx/plugin:generator feature --project=test-plugin2
+npx nx g @nx/plugin:generator feature --project=nextup_platforms
 ```
 
 ## Helpful commands
 
 Remove test packages
+
 ```bash
 rm -rf ./tmp/nextup* 
 ```
 
 Reset npx cache
+
 ```bash
 rm -rf ~/.npm/_npx
 ```
 
 Remove node modules
+
 ```bash
 rm -rf node_modules
 ```
 
 Reset pnpm store
+
 ```bash
 pnpm store prune
 ```
 
 Add Yargs
+
 ```bash
 pnpm add -D @types/yargs yargs 
 ```
@@ -66,19 +75,19 @@ const path = require('path');
 const ignored = [];
 
 function postfixFiles(startingDirectory, postfix) {
-    fs.readdirSync(startingDirectory).forEach(file => {
-        const oldPath = path.join(startingDirectory, file);
-        if (fs.statSync(oldPath).isDirectory()) {
-            postfixFiles(oldPath, postfix); // Recursively process directories
-        } else {
-            if (!file.endsWith(postfix)) {
-                const newFilename = file + postfix;
-                const newPath = path.join(startingDirectory, newFilename);
-                fs.renameSync(oldPath, newPath);
-                console.log(`Renamed: ${oldPath} -> ${newPath}`);
-            }
-        }
-    });
+  fs.readdirSync(startingDirectory).forEach(file => {
+    const oldPath = path.join(startingDirectory, file);
+    if (fs.statSync(oldPath).isDirectory()) {
+      postfixFiles(oldPath, postfix); // Recursively process directories
+    } else {
+      if (!file.endsWith(postfix)) {
+        const newFilename = file + postfix;
+        const newPath = path.join(startingDirectory, newFilename);
+        fs.renameSync(oldPath, newPath);
+        console.log(`Renamed: ${oldPath} -> ${newPath}`);
+      }
+    }
+  });
 }
 
 // Example usage:
@@ -87,6 +96,7 @@ const postfix = '.template';
 postfixFiles(currentDirectory, postfix);
 
 ```
+
 ## Nx plugins and code generators
 
 Add Nx plugins to leverage their code generators and automated, inferred tasks.

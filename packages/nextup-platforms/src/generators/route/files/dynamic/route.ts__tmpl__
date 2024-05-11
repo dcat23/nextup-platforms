@@ -1,0 +1,82 @@
+import axios from "axios";
+import { NextResponse } from "next/server";
+import { z } from "zod";
+
+export async function GET(
+  request: Request,
+  {
+    params,
+  }: {
+    params: {
+      id: string;
+    };
+  },
+) {
+  try {
+
+    const id = parseInt(params.id);
+
+    const routeIdSchema = z.number();
+
+    const zod = routeIdSchema.safeParse(id);
+
+    if (!zod.success) {
+      return NextResponse.json(
+        {
+          message: "Invalid path variable",
+          error: zod.error.formErrors,
+        },
+        { status: 400 },
+      );
+    }
+
+    const { searchParams } = new URL(request.url);
+
+    return NextResponse.json("Not implemented", { status: 200 });
+  } catch (e: any) {
+    console.error("Unhandled Error:", { e });
+    return NextResponse.json({ error: e.message }, { status: 500 });
+  }
+}
+
+export async function POST(
+  request: Request,
+  {
+    params,
+  }: {
+    params: {
+      id: string;
+    };
+  },
+) {
+  try {
+    const id = parseInt(params.id);
+
+        const routeIdSchema = z.number();
+
+        const zod = routeIdSchema.safeParse(id);
+
+    if (!zod.success) {
+      return NextResponse.json(
+        {
+          message: "Invalid path variable",
+          error: zod.error.formErrors,
+        },
+        { status: 400 },
+      );
+    }
+
+    return NextResponse.json("Not implemented", { status: 200 });
+  } catch (error: any) {
+    if (axios.isAxiosError(error)) {
+      console.error("Axios Error:", error.message);
+      return NextResponse.json(
+        { error: error.response?.data || "Unknown error" },
+        { status: error.response?.status || 500 },
+      );
+    } else {
+      console.error("Unhandled Error:", error);
+      return NextResponse.json({ error: "Unhandled error" }, { status: 500 });
+    }
+  }
+}

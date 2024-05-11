@@ -7,7 +7,9 @@ This library was generated with [Nx](https://nx.dev).
 ```bash
 pnpm i nextup-platforms
 ```
-or 
+
+or
+
 ```bash
 npm i nextup-platforms
 ```
@@ -21,7 +23,9 @@ Scaffolds sub feature into `src/features` directory
 ```bash
 npx nx generate nextup-platforms:feature [name] [options,...]
 ```
-or 
+
+or
+
 ```bash
 npx nx g feature [name] [options,...]
 ```
@@ -44,6 +48,34 @@ Options:
 
 *Note*
     array options a comma separated
+```
+
+### Route
+
+```bash
+npx nx generate nextup-platforms:route [name] [options,...]
+```
+
+or
+
+```bash
+npx nx g route [path] [options,...]
+```
+
+```
+generate nextup-platforms:route [path] [options,...]
+
+From:  nextup-platforms (v0.1.3)
+Name:  route
+
+
+  Next application API route generator
+
+
+Options:
+    --path           API route path                                   [string]
+    --dynamic        The name if using a dynamic route                [string]
+                    (eg: --dynamic id -> path/[id]/route.ts)                                          
 ```
 
 ## Building
