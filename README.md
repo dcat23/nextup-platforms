@@ -3,7 +3,7 @@
 ## Features
 
 * [create-nextup-platforms](./packages/create-nextup-platforms/README.md)
-* [nextup plugin](./packages/nextup/README.md)
+* [nextup plugin](./packages/nextup-platforms/README.md)
 
 ## Using this Repo
 
