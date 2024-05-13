@@ -1,11 +1,13 @@
+"use client";
+
 import React, { ReactNode } from 'react';
 
 interface Props {
-  data: any;
+  data?: any;
   children?: ReactNode;
 }
 
-export const <%= className %> = ({ data, children }: Props) => {
+export function <%= className %> ({ data, children }: Props) {
   return (
     <>
       <%= className %>

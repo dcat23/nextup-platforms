@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 
-export const use<%= className %> = () => {
+export function use<%= className %>()  {
 
   return useMutation({
     mutationFn: async () => {},
