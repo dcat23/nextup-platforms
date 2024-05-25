@@ -7,12 +7,14 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const keyword = searchParams.get("keyword");
 
-    const querySchema = z.string().min(1);
-    const zod = querySchema.safeParse(keyword);
+    const type = searchParams.get("type") || undefined;
+    const id = searchParams.get("id") || undefined;
 
-    if (!zod.success) {
-      return NextResponse.json("Not implemented", { status: 200 });
-    }
+    const cursorQuery = searchParams.get("cursor") || undefined;
+    const take = Number(searchParams.get("limit")) || 20;
+
+    const skip = cursorQuery ? 1 : 0;
+    const cursor = cursorQuery ? { id: cursorQuery } : undefined;
 
     return NextResponse.json("Not implemented", { status: 200 });
   } catch (e: any) {
@@ -35,7 +37,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: zod.error }, { status: 400 });
     }
 
-    return NextResponse.json("Not implemented", { status });
+    return NextResponse.json("Not implemented", { status: 200 });
   } catch (error: any) {
     if (axios.isAxiosError(error)) {
       console.error("Axios Error:", error.message);
