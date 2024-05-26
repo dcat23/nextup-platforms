@@ -25,7 +25,7 @@ nx run-many --targets nx-release-publish
 ```bash
 cd tmp
 rm -rf ./nextup*
-npx create-nextup-platforms@latest nextupPlatformApp --scope dcat23
+npx -y create-nextup-platforms@latest nextupPlatformApp --scope dcat23
 ```
 
 ## Generating Plugins
