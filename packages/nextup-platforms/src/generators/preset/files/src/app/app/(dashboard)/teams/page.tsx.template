@@ -1,7 +1,7 @@
 import { Suspense } from "react";
-import { Teams } from "@<%= scope %>/features/team";
+import { CreateTeamModal, Teams } from "@<%= scope %>/features/team";
 import PlaceholderCard from "@<%= scope %>/components/placeholder-card";
-import { CreateTeamButton, CreateTeamModal } from "@<%= scope %>/features/modal";
+import { ShowModalButton } from "@<%= scope %>/features/modal";
 
 export default function AllTeams({ params }: { params: { id: string } }) {
   return (
@@ -11,9 +11,9 @@ export default function AllTeams({ params }: { params: { id: string } }) {
           <h1 className="font-cal text-3xl font-bold dark:text-white">
             All Teams
           </h1>
-          <CreateTeamButton>
+          <ShowModalButton label={"Create New Team"}>
             <CreateTeamModal />
-          </CreateTeamButton>
+          </ShowModalButton>
         </div>
         <Suspense
           fallback={

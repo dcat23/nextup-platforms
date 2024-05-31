@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useFormStatus } from "react-dom";
 import { cn } from "@<%= scope %>/lib/utils";
 import LoadingDots from "@<%= scope %>/components/icons/loading-dots";
-import { useModalStore } from "../stores/use-modal";
+import { useModalStore } from "@<%= scope %>/features/modal";
 import va from "@vercel/analytics";
 import { useEffect, useState } from "react";
 import { NEXT_PUBLIC_ROOT_DOMAIN } from "@<%= scope %>/lib/config";
